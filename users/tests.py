@@ -14,3 +14,5 @@ class UserRegistrationAPIViewTest(APITestCase):
         }
         response = self.client.post(url, user_data)
         self.assertEqual(response.data,{"message": "가입 완료!!"})
+        # 더 좋은 컨벤션
+        self.assertEqual(response.data,["message"], "가입 완료!!")
